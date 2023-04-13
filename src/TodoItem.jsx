@@ -1,3 +1,5 @@
+import { FaTrash } from "react-icons/fa";
+
 function TodoItem({ id, completed, title, toggleTodo, deleteTodo }) {
   return (
     <li className='todo__item' id='checklist'>
@@ -12,7 +14,7 @@ function TodoItem({ id, completed, title, toggleTodo, deleteTodo }) {
         <label htmlFor={id}> {title} </label>
       </div>
       <button onClick={() => deleteTodo(id)} className=' btn btn-secondary'>
-        Remove
+        <FaTrash />
       </button>
     </li>
   );
