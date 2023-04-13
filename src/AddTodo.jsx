@@ -11,16 +11,16 @@ function AddTodo({ onSubmit }) {
 
   return (
     <form onSubmit={handleSubmit} className='form'>
-      <div className='form-group'>
-        <label htmlFor='item'>Add Todo</label>
-        <input
-          type='text'
-          id='item'
-          value={newItem}
-          onChange={(e) => setNewItem(e.target.value)}
-        />
-      </div>
-      <button className='btn'>Add Todo</button>
+      <input
+        className='form-input'
+        type='text'
+        id='item'
+        placeholder='Add your task..'
+        value={newItem}
+        onChange={(e) => setNewItem(e.target.value)}
+      />
+
+      <button className='btn btn-primary'>Add Todo</button>
     </form>
   );
 }

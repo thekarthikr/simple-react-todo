@@ -1,16 +1,18 @@
 function TodoItem({ id, completed, title, toggleTodo, deleteTodo }) {
   return (
-    <li className='todo__item'>
-      <label>
+    <li className='todo__item' id='checklist'>
+      <div className='todo__item-content'>
         <input
+          className='todo__input'
           type='checkbox'
+          id={id}
           checked={completed}
           onChange={(e) => toggleTodo(id, e.target.checked)}
         />
-        {title}
-      </label>
-      <button onClick={() => deleteTodo(id)} className='btn btn-delete'>
-        Delete
+        <label htmlFor={id}> {title} </label>
+      </div>
+      <button onClick={() => deleteTodo(id)} className=' btn btn-secondary'>
+        Remove
       </button>
     </li>
   );

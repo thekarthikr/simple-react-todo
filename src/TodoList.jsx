@@ -2,7 +2,7 @@ import TodoItem from "./TodoItem";
 function TodoList({ todos, toggleTodo, deleteTodo }) {
   return (
     <ul className='todo__list'>
-      {todos.length === 0 && "No Todos"}
+      {todos.length === 0 && "No tasks were assigned.."}
       {todos.map((todo) => {
         return (
           <TodoItem
